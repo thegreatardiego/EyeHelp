@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ededed"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:ignore="ExtraText">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="267dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/box" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="640dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:srcCompat="@drawable/box" />
+
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/textView2"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginBottom="24dp"-->
+        <!--            android:text="@string/red_slider"-->
+        <!--            android:textSize="20sp"-->
+        <!--            app:layout_constraintBottom_toTopOf="@+id/textView3"-->
+        <!--            app:layout_constraintEnd_toStartOf="@+id/red_slider"-->
+        <!--            app:layout_constraintHorizontal_bias="0.516"-->
+        <!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+        <!--        <SeekBar-->
+        <!--            android:id="@+id/red_slider"-->
+        <!--            android:layout_width="200dp"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_marginTop="28dp"-->
+        <!--            android:buttonTint="@color/purple_700"-->
+        <!--            android:max="255"-->
+        <!--            android:progress="255"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintHorizontal_bias="0.502"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/btn_gallery" />-->
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/red_number"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:width="40dp"-->
+        <!--            android:ems="10"-->
+        <!--            android:imeOptions="actionDone"-->
+        <!--            android:inputType="number"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/red_slider"-->
+        <!--            app:layout_constraintBottom_toTopOf="@id/green_number"-->
+        <!--            tools:layout_editor_absoluteY="634dp" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/textView3"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginEnd="12dp"-->
+        <!--            android:layout_marginBottom="28dp"-->
+        <!--            android:text="@string/green_slider"-->
+        <!--            android:textSize="20sp"-->
+        <!--            app:layout_constraintBottom_toTopOf="@+id/textView4"-->
+        <!--            app:layout_constraintEnd_toStartOf="@+id/green_slider"-->
+        <!--            app:layout_constraintHorizontal_bias="0.587"-->
+        <!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+        <!--        <SeekBar-->
+        <!--            android:id="@+id/green_slider"-->
+        <!--            android:layout_width="200dp"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:buttonTint="@color/purple_700"-->
+        <!--            android:max="255"-->
+        <!--            android:progress="255"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/red_slider" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/textView4"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginBottom="24dp"-->
+        <!--            android:text="@string/blue_slider"-->
+        <!--            android:textSize="20sp"-->
+        <!--            app:layout_constraintBottom_toTopOf="@+id/textView5"-->
+        <!--            app:layout_constraintEnd_toStartOf="@+id/blue_slider"-->
+        <!--            app:layout_constraintHorizontal_bias="0.505"-->
+        <!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+        <!--        <SeekBar-->
+        <!--            android:id="@+id/blue_slider"-->
+        <!--            android:layout_width="200dp"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:buttonTint="@color/purple_700"-->
+        <!--            android:max="255"-->
+        <!--            android:progress="255"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/green_slider" />-->
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/blue_number"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:width="40dp"-->
+        <!--            android:ems="10"-->
+        <!--            android:imeOptions="actionDone"-->
+        <!--            android:inputType="number"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintHorizontal_bias="0.507"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/blue_slider"-->
+        <!--            app:layout_constraintBottom_toTopOf="@+id/alpha_number"-->
+        <!--            tools:layout_editor_absoluteY="734dp" />-->
+        <TableLayout
+            android:id="@id/table"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <TextView
+                    android:id="@+id/Rleft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:text="R"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/RtoR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:width="40dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:text="255"
+                    app:layout_constraintStart_toEndOf="@id/Rleft" />
+
+                <EditText
+                    android:id="@+id/RtoG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:width="40dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:text="0"
+                    app:layout_constraintStart_toEndOf="@id/RtoR" />
+
+                <EditText
+                    android:id="@+id/RtoB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:width="40dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:text="0"
+                    app:layout_constraintStart_toEndOf="@id/RtoG" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <TextView
+                    android:id="@+id/Gleft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:text="G"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/GtoR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:width="40dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:text="0"
+                    app:layout_constraintStart_toEndOf="@id/Gleft" />
+
+                <EditText
+                    android:id="@+id/GtoG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:width="40dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:text="255"
+                    app:layout_constraintStart_toEndOf="@id/GtoR" />
+
+                <EditText
+                    android:id="@+id/GtoB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:width="40dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:text="0"
+                    app:layout_constraintStart_toEndOf="@id/GtoG" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <TextView
+                    android:id="@+id/Bleft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:text="B"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/BtoR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:width="40dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:text="0"
+                    app:layout_constraintStart_toEndOf="@id/Bleft" />
+
+                <EditText
+                    android:id="@+id/BtoG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:width="40dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:text="0"
+                    app:layout_constraintStart_toEndOf="@id/BtoR" />
+
+                <EditText
+                    android:id="@+id/BtoB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:width="40dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:text="255"
+                    app:layout_constraintStart_toEndOf="@id/BtoG" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="A"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/alpha_slider"
+            app:layout_constraintEnd_toStartOf="@+id/alpha_slider"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <SeekBar
+            android:id="@+id/alpha_slider"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/purple_700"
+            android:max="255"
+            android:progress="255"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/table" />
+
+        <EditText
+            android:id="@+id/alpha_number"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:width="40dp"
+            android:ems="10"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:text="255"
+            app:layout_constraintBottom_toBottomOf="@+id/alpha_slider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toEndOf="@+id/alpha_slider" />
+
+        <RadioGroup
+            android:id="@+id/button_group2"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:translationZ="90dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alpha_slider">
+
+            <RadioButton
+                android:id="@+id/custom_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClick"
+                android:text="@string/custom_button" />
+
+            <RadioButton
+                android:id="@+id/default_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClick"
+                android:text="@string/default_button" />
+
+            <RadioButton
+                android:id="@+id/protan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClick"
+                android:text="Protanopia" />
+
+            <RadioButton
+                android:id="@+id/deuteran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClick"
+                android:text="Deuteranopia" />
+
+            <RadioButton
+                android:id="@+id/tritan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClick"
+                android:text="Tritanopia" />
+
+            <RadioButton
+                android:id="@+id/gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClick"
+                android:text="Grayscale" />
+
+            <RadioButton
+                android:id="@+id/invert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:buttonTint="@color/purple_700"
+                android:onClick="onClick"
+                android:text="Inverted" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/apply_filter"
+            android:layout_width="185dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:onClick="applyFilter"
+            android:text="@string/apply_filter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_after" />
+
+        <Button
+            android:id="@+id/revert_filter"
+            android:layout_width="185dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="4dp"
+            android:onClick="revertFilter"
+            android:text="@string/revert"
+            app:layout_constraintEnd_toStartOf="@+id/apply_filter"
+            app:layout_constraintHorizontal_bias="0.16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_before" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_before"
+            android:layout_width="185dp"
+            android:layout_height="139dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="18dp"
+            android:contentDescription="@string/image_content_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/scene"
+            app:shapeAppearanceOverlay="@style/RoundedRectangle"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_after"
+            android:layout_width="185dp"
+            android:layout_height="139dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/image_content_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/img_before"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/scene"
+            app:shapeAppearanceOverlay="@style/RoundedRectangle"/>
+
+        <Button
+            android:id="@+id/save_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:onClick="saveFilter"
+            android:text="Save Filter As Preset"
+            app:layout_constraintTop_toBottomOf="@id/imageView"
+            app:layout_constraintBottom_toTopOf="@+id/start_button"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ToggleButton
+            android:id="@+id/start_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textOff="Toggle Screen Filter"
+            android:textOn="Toggle Screen Filter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/save_filter" />
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/green_number"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:width="40dp"-->
+        <!--            android:ems="10"-->
+        <!--            android:imeOptions="actionDone"-->
+        <!--            android:inputType="number"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/green_slider"-->
+        <!--            app:layout_constraintBottom_toTopOf="@+id/blue_number"-->
+        <!--            tools:layout_editor_absoluteY="683dp" />-->
+
+        <Button
+            android:id="@+id/btn_gallery"
+            android:layout_width="380dp"
+            android:layout_height="45dp"
+            android:text="Open Gallery"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.451"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/apply_filter" />
+
+        <TextView
+            android:id="@+id/Rtop"
+            android:layout_width="82dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="110dp"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="R"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/table"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/Gtop"
+            android:layout_width="82dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="G"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/table"
+            app:layout_constraintStart_toEndOf="@+id/Rtop" />
+
+        <TextView
+            android:id="@+id/Btop"
+            android:layout_width="82dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="B"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/table"
+            app:layout_constraintStart_toEndOf="@+id/Gtop" />
+
+        <TextView
+            android:id="@+id/from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="From"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/Rtop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/To"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="To"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/table"
+            app:layout_constraintEnd_toStartOf="@+id/table"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/table" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
