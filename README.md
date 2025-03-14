@@ -26,5 +26,6 @@ EyeHelp was developed following the **Agile methodology**, ensuring iterative pr
 EyeHelp showcases the power of **machine learning, mobile technology, and modern algorithms** in addressing color blindness challenges. It serves as a valuable tool for **users, students, researchers, and eye specialists**, promoting better color awareness and accessibility.  
 
 ---
-
+Developed by:
+Angelo R. Diego, BSCS
 🚀 *Contributions, feedback, and suggestions are welcome!*  
